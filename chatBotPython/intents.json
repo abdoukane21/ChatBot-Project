@@ -1,0 +1,65 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": ["Hi!", "Hello there!", "Good morning!", "Hey!", "Hi, how are you?"],
+        "responses": ["Hello", "Good to see you again", "Hi there, how can I help?"],
+        "context": [""]
+      },
+      {
+        "tag": "help",
+        "patterns": ["Can you help me?", "I need some assistance.", "Help please!", "I'm lost, can you assist?"],
+        "responses": ["Sure, I'd be happy to help.", "Of course, what do you need assistance with?"],
+        "context": [""]
+      },
+      {
+        "tag": "faq",
+        "patterns": ["What are your business hours?", "How do I reset my password?", "Do you offer refunds?", "What payment methods do you accept?"],
+        "responses": ["Our business hours are from 9 AM to 5 PM, Monday to Friday.", "To reset your password, you can go to the login page and click on 'Forgot Password'.", "Yes, we offer refunds under certain conditions.", "We accept various payment methods including credit/debit cards and PayPal."],
+        "context": [""]
+      },
+      {
+        "tag": "product_information",
+        "patterns": ["Tell me about your latest smartphone model.", "What features does your premium subscription offer?", "How much does your basic plan cost?", "What colors are available for your product?"],
+        "responses": ["Our latest smartphone model comes with a dual camera setup and 5G connectivity.", "Our premium subscription offers exclusive access to advanced features and content.", "Our basic plan starts at $10 per month.", "Our product is available in black, white, and blue colors."],
+        "context": [""]
+      },
+      {
+        "tag": "order_tracking",
+        "patterns": ["Where is my package?", "Can you update me on my order status?", "I haven't received my order yet, what should I do?", "My tracking number is XYZ123, can you check it?"],
+        "responses": ["Please provide your order number, and I'll check the status for you.", "I can assist you with tracking your order. Please provide the necessary details.", "I'm sorry to hear that. Please provide your order details, and I'll investigate further.", "Sure, let me check the status of your order with the provided tracking number."],
+        "context": [""]
+      },
+      {
+        "tag": "feedback",
+        "patterns": ["I'd like to leave some feedback.", "How can I provide suggestions for improvement?", "Your service is great!", "I'm not satisfied with the product quality."],
+        "responses": ["We appreciate your feedback! Please feel free to share your thoughts.", "You can provide suggestions for improvement through our website or contact us directly.", "Thank you for the positive feedback! We strive to deliver the best service to our customers.", "I apologize for the inconvenience. Please provide details, and we'll address the issue promptly."],
+        "context": [""]
+      },
+      {
+        "tag": "booking",
+        "patterns": ["I'd like to book a table for two tonight.", "Can I reserve tickets for the 3 PM show?", "I need to schedule a meeting for tomorrow morning.", "Is there availability for a room on the 15th of next month?"],
+        "responses": ["Sure, let me check availability for you.", "I'll help you with that. Please provide the necessary details.", "Certainly, I can assist you with scheduling your meeting.", "Let me check our booking system for availability on the requested date."],
+        "context": [""]
+      },
+      {
+        "tag": "cancellation",
+        "patterns": ["I need to cancel my flight booking.", "Can you help me cancel my subscription?", "I want to cancel my order.", "I need to reschedule my appointment."],
+        "responses": ["I'm sorry to hear that. Please provide your booking details, and I'll assist you with the cancellation.", "Sure, I can help you with that. Please provide your subscription details.", "To cancel your order, please provide the order number.", "Certainly, please provide the appointment details, and I'll help you reschedule."],
+        "context": [""]
+      },
+      {
+        "tag": "complaint",
+        "patterns": ["I am not satisfied with the product I received.", "I need to report a problem with your service.", "My order was delivered damaged.", "The website is not functioning properly."],
+        "responses": ["I apologize for the inconvenience. Please provide details of the issue, and we'll investigate.", "We take customer complaints seriously. Please share the details so we can address the problem.", "I'm sorry to hear about the damaged order. Please provide the order number and details of the damage.", "Thank you for bringing this to our attention. We'll look into the issue with the website."],
+        "context": [""]
+      },
+      {
+        "tag": "small_talk",
+        "patterns": ["How's the weather today?", "What are your plans for the weekend?", "Have you seen any good movies lately?", "How was your day?", "Do you like pizza?"],
+        "responses": ["The weather is nice today!", "I plan to relax and spend time with friends.", "I watched a great movie last night!", "My day has been good so far, thank you.", "Yes, pizza is one of my favorite foods!"],
+        "context": [""]
+      }
+    ]
+  }
+  

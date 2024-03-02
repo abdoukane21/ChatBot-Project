@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box"></div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="send-btn">Send</button>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#send-btn').on('click', function(){
+                var userMessage = $('#user-input').val();
+                sendMessage(userMessage);
+            });
+
+            $('#user-input').keypress(function(event){
+                if (event.which === 13) {
+                    var userMessage = $('#user-input').val();
+                    sendMessage(userMessage);
+                }
+            });
+
+            function sendMessage(message) {
+                if (message.trim() !== '') {
+                    $('#chat-box').append('<div class="user-message">' + message + '</div>');
+                    $('#user-input').val('');
+                    getResponse(message);
+                }
+            }
+
+            function getResponse(message) {
+                $.ajax({
+                    type: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({'message': message}),
+                    url: '/predict',
+                    success: function(response) {
+                        $('#chat-box').append('<div class="bot-message">' + response.response + '</div>');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
